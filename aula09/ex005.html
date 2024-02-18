@@ -16,16 +16,12 @@
     <h1>Iniciando estudos DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div name="msg">Clique em mim</div>
+    <div id="msg">Código em HTML</div>
     <br>
 
     <script>
-        var corpo = document.body
-        var p1 = document.getElementsByTagName('p')
-        // var d = document.getElementById('msg')
-        // d.style.background = 'green'
-        // d.innerText = 'Estou aguardando...'
-        var d = document.getElementsByName('msg')
+        var M = document.querySelector('div#msg')
+        M.innerHTML = 'Mudei meu código via <strong>JS</strong>'
     </script>
 </body>
 </html>
