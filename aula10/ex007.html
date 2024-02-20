@@ -16,29 +16,57 @@
         }
 
         h2 {
+            font-size: 1.4em;
             font-weight: normal;
         }
 
-        div {
-            margin-top: 20px;
+        div.form {
+            margin: 10px 5px;
+        }
+
+        div#res {
+            margin-top: 10 5px;
         }
     </style>
 </head>
 <body>
     <h1>Somando Valores</h1>
-    <h2>Digite dois números:</h2>
-    <input type="number" name="n1" id="n1"> +
-    <input type="number" name="n2" id="n2">
-    <input type="button" value="Somar" onclick="somar()">
+
+    <form action="soma.php">
+        <div class="form">
+            <label for="n1">Digite um número: </label>
+            <input type="number" name="n1" id="n1">
+        </div>
+
+        <div class="form">
+            <label for="n2">Digite outro número:</label>
+            <input type="number" name="n2" id="n2">
+        </div>
+
+        <div class="form">
+            <input type="button" value="Somar" onclick="somar()">
+        </div>
+    </form>
+
     <div id="res"></div>
 
     <script>
         function somar() {
             var n1 = Number((document.getElementById('n1')).value)
             var n2 = Number((document.getElementById('n2')).value)
+            
             var res = document.getElementById ('res')
-            var s = n1 + n2
-            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a: <strong>${s}</strong>`
+            var soma = n1 + n2
+            var sub = n1 - n2
+            var mult = n1 * n2
+            var div = n1 / n2
+
+            res.innerHTML = `
+            A soma entre os valores ${n1} e ${n2} é igual a: <strong>${soma}</strong> <br>
+            A subtração entre os valores ${n1} e ${n2} é igual a: <strong>${sub}</strong> <br>
+            A multiplicação entre os valores ${n1} e ${n2} é igual a: <strong>${mult}</strong> <br>
+            A divisão entre os valores ${n1} e ${n2} é igual a: <strong>${div}</strong>
+            `
         }
     </script>
 </body>
