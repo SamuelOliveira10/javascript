@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de País</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escreva qual o seu país</h1>
+    <form action="pais.php">
+        <label for="pais">Qual o seu país?</label>
+        <input type="text" name="pais" id="pais">
+        <input type="button" value="Verificar" onclick="verif()">
+    </form>
+    <div id="desg"></div>
+    <div id="msg"></div>
+    <div id="msg2"></div>
+    <div id="msg3"></div>
+
+    <script>
+        function verif() {
+            var p1 = String(document.getElementById('pais').value.toUpperCase())
+
+            var resp1 = document.getElementById('msg')
+            var resp2 = document.getElementById('msg2')
+            var resp3 = document.getElementById('msg3')
+
+            resp1.innerHTML = `Você vive em ${p1}`
+            
+            if (p1 == 'BRASIL') {
+                resp2.innerHTML = 'Você é Brasileiro!!'
+            }
+
+            else {
+                resp3.innerHTML = 'Você é estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
