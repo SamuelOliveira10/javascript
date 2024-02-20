@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <form action="detran.php">
+        <label for="">Velocidade do carro:</label>
+        <input type="number" name="vel" id="velc"> Km/h
+        <input type="button" value="Verficar" onclick="verif()">
+    </form>
+    <div id="msg1"></div>
+    <div id="msg2"></div>
+    <div id="msg3"></div>
+
+    <script>
+        function verif() {
+            var vel = Number(document.getElementById('velc').value)
+            var resp1 = document.getElementById('msg1')
+            var resp2 = document.getElementById('msg2')
+            var resp3 = document.getElementById('msg3')
+
+            resp1.innerHTML = `Sua velocidade atual é de: <strong>${vel}Km/h</strong>`
+            if (vel > 70) {
+                 resp2.innerHTML = `Você está <strong>MULTADO</strong> por excesso de velocidade!`
+            }
+            resp3.innerHTML = `Dirija sempre com cinto de segurança.`
+        }
+    </script>
+</body>
+</html>
