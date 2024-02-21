@@ -17,27 +17,22 @@
         <input type="text" name="pais" id="pais">
         <input type="button" value="Verificar" onclick="verif()">
     </form>
-    <div id="desg"></div>
     <div id="msg"></div>
-    <div id="msg2"></div>
-    <div id="msg3"></div>
 
     <script>
         function verif() {
             var p1 = String(document.getElementById('pais').value.toUpperCase())
 
-            var resp1 = document.getElementById('msg')
-            var resp2 = document.getElementById('msg2')
-            var resp3 = document.getElementById('msg3')
+            var resp = document.getElementById('msg')
 
-            resp1.innerHTML = `Você vive em ${p1}`
+            resp.innerHTML = `Você vive em ${p1} <br>`
             
             if (p1 == 'BRASIL') {
-                resp2.innerHTML = 'Você é Brasileiro!!'
+                resp.innerHTML += 'Você é Brasileiro!!'
             }
 
             else {
-                resp3.innerHTML = 'Você é estrangeiro'
+                resp.innerHTML += 'Você é estrangeiro'
             }
         }
     </script>
