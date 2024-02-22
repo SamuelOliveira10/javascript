@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzane</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 97vh;
+            position: relative;
+        }
+
+        div#msg {
+            padding-top: 50px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        div#botao {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            height: 100px;
+            width: 200px;
+
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="msg"></div>
+
+    <div id="botao" ><input type="button" value="Clique em mim" onclick="suzane()"></div>
+
+    <script>
+        function suzane() {
+            var agora = new Date()
+            var hora = agora.getHours()
+            var min = agora.getMinutes()
+            var mens = document.getElementById('msg')
+            
+            mens.innerHTML = `Agora são precisamente ${hora}:${min} <br>`
+
+            if (hora < 6) {
+                mens.innerHTML += `Você devia estar dormindo!!`
+            } else if (hora < 12) {
+                mens.innerHTML += 'Bom dia!!'
+            } else if (hora < 18) {
+                mens.innerHTML += 'Boa Tarde!!'
+            } else {
+                mens.innerHTML += 'Boa noite!!'
+            }
+        }
+    </script>
+</body>
+</html>
