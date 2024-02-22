@@ -2,6 +2,8 @@ var agora = new Date()
 var hora = agora.getHours()
 var min = agora.getMinutes()
 
+
+//Declaração de variáveis
 var fund = document.getElementById('fundo')
 var hor = document.getElementById('horario')
 var img = document.getElementById('imagem')
@@ -12,6 +14,8 @@ var zeroh = ''
 //var hora = 5
 //var min = 4
 
+
+//Correção de erro
 if (min < 10) {
     zerom = 0
 }
@@ -19,8 +23,12 @@ if (hora < 10) {
     zeroh = 0
 }
 
+
+//Texto inicial
 hor.innerHTML = `Agora são precisamente <strong>${zeroh}${hora}:${zerom}${min}</strong></p>`
 
+
+//Funcionamento
 if (hora < 6) {
     fund.style.backgroundColor = 'rgb(20, 20, 20)'
     img.style.backgroundImage = 'url(imagens/madrugada.jpg)'
