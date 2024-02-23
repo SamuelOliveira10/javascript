@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Verificador de Idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,12 +13,12 @@
 
     <section>
         <form action="verif.php">
-            <div>
+            <div class="txt">
                 <label for="idade">Ano do Nascimento:</label>
                 <input type="number" name="idade" id="idade">
             </div>
 
-            <div>
+            <div class="txt">
                 Sexo:
                 <input type="radio" name="sexo" id="masc">
                 <label for="masc">Masculino</label>
@@ -30,9 +30,9 @@
             <input type="button" value="Verificar" onclick="verif()">
         </form>
 
-        <div id="msg"></div>
-
         <div id="foto"></div>
+
+        <div class="txt" id="msg"></div>
     </section>
 
     <footer>
