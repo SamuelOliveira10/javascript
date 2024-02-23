@@ -4,6 +4,7 @@ function verif() {
     var msg = document.getElementById('msg')
     var nasc = document.getElementById('idade').value
     var sex = document.getElementsByName('sexo')
+    var imagem = document.getElementById('foto')
     var genero = ''
 
     if (nasc.length == 0 || nasc < ano - 120 || nasc > ano) {
@@ -23,7 +24,28 @@ function verif() {
 
     if (genero == 'M') {
         if (idade < 5) {
+            imagem.innerHTML = `Bebê masculino`
+        } else if (idade < 14) {
+            imagem.innerHTML = `Criança masculina`
+        } else if (idade < 20) {
+            imagem.innerHTML = `Adolescente masculino`
+        } else if (idade < 60) {
+            imagem.innerHTML = `Adulto masculino`
+        }else {
+            imagem.innerHTML = `Idoso masculino`
+        }
 
-        } else if idade
+    } else if (genero == 'F') {
+        if (idade < 5) {
+            imagem.innerHTML = `Bebê feminino`
+        } else if (idade < 14) {
+            imagem.innerHTML = `Criança feminina`
+        } else if (idade < 20) {
+            imagem.innerHTML = `Adolescente feminina`
+        } else if (idade < 60) {
+            imagem.innerHTML = `Adulta feminina`
+        } else {
+            imagem.innerHTML = `Idosa feminina`
+        }
     }
 }
