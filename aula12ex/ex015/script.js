@@ -20,4 +20,10 @@ function verif() {
             alert('[ERRO] preencha os campos corretamente')
         }
     }
+
+    if (genero == 'M') {
+        if (idade < 5) {
+
+        } else if idade
+    }
 }
