@@ -11,7 +11,7 @@ var msg = document.getElementById('msg')
 var zerom = ''
 var zeroh = ''
 
-//var hora = 5
+//var hora = 12
 //var min = 4
 
 
