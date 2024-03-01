@@ -13,13 +13,26 @@ function contar() {
             alert('Passo inválido! Considerando PASSO 1')
             np = 1
         }
+
+        if (np < 0) {
+            np *= -1
+            alert(`Passo inválido! Considerando PASSO ${np}`)
+        }
+        
         var n1 = Number(ni)
         var n2 = Number(nf)
         var n3 = Number(np)
         res.innerHTML += 'Contando: <br>'
-        for(n1; n1 <= n2; n1 += n3) {
-            res.innerHTML += `${n1} &#x1F449 `
+        if (n1 < n2) {
+            for(n1; n1 <= n2; n1 += n3) {
+                res.innerHTML += `${n1} &#x1F449 `
+            }
+        } else if (n1 > n2) {
+            for(n1; n1 >= n2; n1 -= n3) {
+                res.innerHTML += `${n1} &#x1F449 `
+            }
         }
+
         res.innerHTML += '&#x1F3C1'
     } 
 }
