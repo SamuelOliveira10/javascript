@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Soma</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Somando Números</h1>
     </header>
 
     <section>
-        <div>Testando...</div>
-        <div></div>
+        <div>
+            <label for="n1">Digite um número: </label>
+            <input type="number" name="n1" id="n1">
+        </div>
+
+        <div>
+            <label for="n2">Digite outro número: </label>
+            <input type="number" name="n2" id="n2">
+        </div>
+
+        <div>
+            <input type="button" value="Somar" onclick="somar()">
+        </div>
+
+        <div id="msg"></div>
     </section>
 
     <footer>
-        <p>&copy MasterCode</p>
+        <p id="marca">&copy MasterCode</p>
     </footer>
 
     <script src="script.js"></script>

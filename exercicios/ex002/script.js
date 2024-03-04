@@ -1,6 +1,6 @@
 function mostrar() {
-    msg = document.getElementById('resp')
-    nome = document.getElementById('nome').value
+    let msg = document.getElementById('resp')
+    let nome = document.getElementById('nome').value
     if (nome.length == 0) {
         alert('Digite um nome!')
     } else {

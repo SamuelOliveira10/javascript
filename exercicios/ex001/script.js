@@ -1,2 +1,2 @@
-msg = document.getElementById('resp')
+let msg = document.getElementById('resp')
 msg.innerHTML = `Olá mundo!`
