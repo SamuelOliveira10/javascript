@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Pintar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Pintar</h1>
     </header>
 
     <section>
         <div>
-            <label for=""></label>
-            <input type="number" name="" id="">
-            <input type="button" value="OK" onclick="">
+            <label for="largura">Largura da parede: </label>
+            <input type="number" name="largura" id="largura">
         </div>
+            
+        <div>
+            <label for="altura">Altura da parede: </label>
+            <input type="number" name="altura" id="altura">
+        </div>
+
+        <div>
+            <input type="button" value="OK" onclick="pintar()">
+        </div>
+
         <div id="mensagem"></div>
     </section>
 

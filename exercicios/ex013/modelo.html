@@ -8,11 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>Olá mundo!</h1>
+        <h1>Título</h1>
     </header>
 
     <section>
-        <div>Me livrei da maldição</div>
+        <div>
+            <label for="salario">Qual o salário do Funcionário? R$</label>
+            <input type="number" name="salario" id="salario">
+            <input type="button" value="OK" onclick="aumento()">
+        </div>
+        <div id="mensagem"></div>
     </section>
 
     <footer>

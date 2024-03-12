@@ -1,1 +1,3 @@
-msg = document.getElementById('msg')
+function x(){
+    let msg = document.getElementById('mensagem')
+}

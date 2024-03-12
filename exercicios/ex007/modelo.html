@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Média</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Média Aritimética</h1>
     </header>
 
     <section>
         <div>
-            <label for=""></label>
-            <input type="number" name="" id="">
-            <input type="button" value="OK" onclick="">
+            <label for="num1">Primeira nota do aluno: </label>
+            <input type="number" name="num1" id="num1">
+        </div>
+
+        <div>
+            <label for="num2">Segunda nota do aluno: </label>
+            <input type="number" name="num2" id="num2">
+        </div>
+
+        <div>
+            <input type="button" value="OK" onclick="media()">
         </div>
         <div id="mensagem"></div>
     </section>
