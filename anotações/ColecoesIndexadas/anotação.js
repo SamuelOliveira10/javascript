@@ -1,7 +1,7 @@
 /*              CRIANDO UM ARRAY                */
 
 
-/*              CRIANDO UM ARRAY                */
+/*          REFERINDO-SE A ELEMENTOS ARRAY          */
 
 
 /*              PREENCHENDO UM ARRAY              */
