@@ -1,42 +1,31 @@
-// function analisar() {
-//     var msg = document.getElementById('msg')
-//     var dado = document.getElementById('info').value
+function analisar() {
+    var msg = document.getElementById('msg')
+    var dado = document.getElementById('info').value
 
-//     msg.innerHTML = `
-//     O tipo primitivo desse dado é: ${typeof(dado)} <br>
-//     Só tem espaços? ${isSpace(dado)} <br>
-//     É alfabético? ${isAlpha(dado)} <br>
-//     É um número? ${isNumeric(dado)} <br>
-//     É alfanumérico? ${isAlNum(dado)} <br>
-//     Está em maiúsculas? ${isUpper(dado)} <br>
-//     Está em minúsculas? ${isLower(dado)} <br>
-//     Está capitalizada? ${isTitle(dado)}
-//     `
-// }
-
-
-
-const regEx = {
-    space: /^[ ]+$/
+    msg.innerHTML = `
+    O tipo primitivo desse dado é: ${typeof(dado)} <br>
+    Só tem espaços? ${isSpace(dado)} <br>
+    É alfabético? ${isAlpha(dado)} <br>
+    É um número? ${isNumeric(dado)} <br>
+    É alfanumérico? ${isAlNum(dado)} <br>
+    Está em maiúsculas? ${isUpper(dado)} <br>
+    Está em minúsculas? ${isLower(dado)} <br>
+    Está capitalizada? ${isTitle(dado)}
+    `
 }
 
-// function isSpace(str) {
-//     if (regEx.space.test(str)) {
-//         'Sim'
-//     } else { 
-//         'Não'
-//     }
-// }
 
-
-/* TENTAR FAZER UMA ARROW FUNCTION */
-const space = 
-
-console.log(isSpace('           '))
-console.log(regEx)
+function isSpace(str) {
+    let space = /^[ ]+$/
+    if (space.test(str)) {
+        return 'Sim'
+    } else { 
+        return 'Não'
+    }
+}
 
 function isAlpha(str) {
-    let alpha = /^[a-zA-z]+$/
+    let alpha = /^[a-zA-Z]+$/
     if (alpha.test(str)) {
         return 'Sim'
     } else { 
