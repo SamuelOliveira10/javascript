@@ -18,3 +18,11 @@
     console.log(arr.regEx.test(num)) // false 
     console.log(arr.regEx.test(str)) // true 
 }
+
+/*          OBJETOS SEMELHANTES A ARRAYS            */ {
+    /* Iterando sobre strings: */ {
+        Array.prototype.forEach.call("a string", (chr) => {
+            console.log(chr);
+        })
+    }
+}

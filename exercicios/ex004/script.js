@@ -4,13 +4,13 @@ function analisar() {
 
     msg.innerHTML = `
     O tipo primitivo desse dado é: ${typeof(dado)} <br>
-    Só tem espaços? ${isSpace(dado)} <br>
-    É alfabético? ${isAlpha(dado)} <br>
-    É um número? ${isNumeric(dado)} <br>
-    É alfanumérico? ${isAlNum(dado)} <br>
-    Está em maiúsculas? ${isUpper(dado)} <br>
-    Está em minúsculas? ${isLower(dado)} <br>
-    Está capitalizada? ${isTitle(dado)}
+    Só tem espaços? ${funcao.isSpace(dado)} <br>
+    É alfabético? ${funcao.isAlpha(dado)} <br>
+    É um número? ${funcao.isNumeric(dado)} <br>
+    É alfanumérico? ${funcao.isAlNum(dado)} <br>
+    Está em maiúsculas? ${funcao.isUpper(dado)} <br>
+    Está em minúsculas? ${funcao.isLower(dado)} <br>
+    Está capitalizada? ${funcao.isTitle(dado)}
     `
 }
 
