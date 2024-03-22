@@ -14,70 +14,40 @@ function analisar() {
     `
 }
 
-
-function isSpace(str) {
-    let space = /^[ ]+$/
-    if (space.test(str)) {
-        return 'Sim'
-    } else { 
-        return 'Não'
-    }
+const regEx = {
+    space: /^[ ]+$/,
+    alpha: /^[a-zA-Z]+$/,
+    numeric: /^[\d]+$/,
+    alNum: /^[a-zA-Z\d]+$/,
+    upper: /^[A-Z]+$/,
+    lower: /^[a-z]+$/,
+    title: /^[A-Z][a-z]+$/,
+    titles: /^([A-Z][a-z]+[ ][A-Z][a-z]+)+$/
 }
 
-function isAlpha(str) {
-    let alpha = /^[a-zA-Z]+$/
-    if (alpha.test(str)) {
-        return 'Sim'
-    } else { 
-        return 'Não'
-    }
+const funcao = {
+    isSpace: (str) => regEx.space.test(str)? 'Sim' : 'Não',
+    isAlpha: (str) => regEx.alpha.test(str)? 'Sim' : 'Não',
+    isNumeric: (str) => regEx.numeric.test(str)? 'Sim' : 'Não',
+    isAlNum: (str) => regEx.alNum.test(str)? 'Sim' : 'Não',
+    isUpper: (str) => regEx.upper.test(str)? 'Sim' : 'Não',
+    isLower: (str) => regEx.lower.test(str)? 'Sim' : 'Não',
+    isTitle: (str) => regEx.title.test(str) || regEx.titles.test(str)? 'Sim' : 'Não'
 }
 
 
-function isNumeric(str) {
-    let numeric = /^[0-9]+$/
-    if (numeric.test(str)) {
-        return 'Sim'
-    } else { 
-        return 'Não'
-    }
-}
 
-function isAlNum(str) {
-    let alnum = /^[a-zA-Z0-9]+$/
-    if (alnum.test(str)) {
-        return 'Sim'
-    }
-    else {
-        return 'Não'
-    }
-}
 
-function isUpper(str) {
-    let upper = /^[A-Z]+$/
-    if (upper.test(str)) {
-        return 'Sim'
-    } else {
-        return 'Não'
-    }
-}
 
-function isLower(str) {
-    let lower = /^[a-z]+$/
-    if (lower.test(str)) {
-        return 'Sim'
-    } else {
-        return 'Não'
-    }
-}
 
-function isTitle(str) {
-    let title = /^([A-Z]{1}[a-z]+)+$/
-    let titles = /^([A-Z]{1}[a-z]+)+[ ]([A-Z]{1}[a-z]+)+$/
-    
-    if (title.test(str) || titles.test(str)) {
-        return 'Sim'
-    } else {
-        return 'Não'
-    }
-}
+// console.log(`
+// Você digitou: ${txt}
+// Seu tipo primitivo é: ${typeof txt}
+// Só tem espaços? ${funcao.isSpace(txt)}
+// É um número? ${funcao.isNumeric(txt)}
+// É alfabético? ${funcao.isAlpha(txt)}
+// É alfanumérico? ${funcao.isAlNum(txt)}
+// Está em maiúsculas? ${funcao.isUpper(txt)}
+// Está em minúsculas? ${funcao.isLower(txt)}
+// Está capitalizada? ${funcao.isTitle(txt)}
+// `)
