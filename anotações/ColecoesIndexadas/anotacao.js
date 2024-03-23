@@ -13,6 +13,6 @@
 /*              FINALIZANDO MATRIZES            */
 
 
-//REFERENCIA:
+//Referência:
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections
