@@ -8,6 +8,7 @@
             a[i][j] = `[${i}, ${j}]`;
         }   
     }
+    console.log(a)
 }
 
 /*          ARMAZENANDO OUTRAS PROPRIEDADES           */ {
