@@ -97,7 +97,7 @@
     const a = ["a", "b", "a", "b", "a"];
     console.log(a.indexOf("b")); // 1
     console.log(a.indexOf("b", 2)); // 3
-    console.log(a.indexOf("z")); // -1
+    console.log(a.indexOf("z")); // -1  
 }
 
 /* 14. lastIndexOf() funciona como indexOf, mas pesquisa do fim para o começo: */ {
