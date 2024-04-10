@@ -1,7 +1,7 @@
 const colors = ["red", "yellow", "blue"];
 colors[5] = "purple";
 const iterator = colors.keys();
-for (const key of iterator) {
+for (let key of iterator) {
   console.log(`${key}: ${colors[key]}`);
 }
 // Output
