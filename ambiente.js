@@ -1,15 +1,15 @@
-const colors = ["red", "yellow", "blue"];
-colors[5] = "purple";
-const iterator = colors.keys();
-for (let key of iterator) {
-  console.log(`${key}: ${colors[key]}`);
-}
-// Output
-// 0: red
-// 1: yellow
-// 2: blue
-// 3: undefined
-// 4: undefined
-// 5: purple
 
-const newColors = colors.toReversed() // ['purple', undefined, undefined, 'blue', 'yellow', 'red'
+
+function well(x){
+  const boas = x.filter((item) => item == 'good')
+  const scrr = boas.length
+  if (scrr > 0 && scrr < 3) {
+    return 'Publish!'
+  } else if (scrr > 2) {
+    return 'I smell a series!'
+  }// else if (scrr < 1) {
+  //   return 'Fail!'
+  // }
+}
+
+console.log(well(ideias))
