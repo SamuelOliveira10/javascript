@@ -181,7 +181,7 @@
     console.log(a2.every(isNumber)); // false
 }
 
-/* 24. some() retorna truese callbackretornar truepelo menos um item da matriz: */ {
+/* 24. some() retorna true se callbackretornar true pelo menos um item da matriz: */ {
     function isNumber(value) {
         return typeof value === "number";
     }
