@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(39, 39, 39);
+    height: 100vh;
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#conteudo {
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    height: 75px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    color: white;
+    border: 2px solid black;
+    text-align: center;
+    height: 55px;
+    width: 55px;
+    font-size: 2em;
+}
