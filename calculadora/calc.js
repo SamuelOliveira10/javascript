@@ -1,13 +1,36 @@
 function insert(num){
-    const result = document.getElementById('conteudo')
-    let numero = document.getElementById('conteudo').innerHTML
-    result.innerHTML += num
+    let result = document.getElementById('conteudo')
+    let conteudo = document.getElementById('conteudo').innerHTML
+    if (num == '0' && conteudo == ''){
+        result.innerHTML = '0.'
+    } else {
+        result.innerHTML += num
+    }
+}
+
+function insertOperator(sin){
+    let result = document.getElementById('conteudo')
+    let conteudo = document.getElementById('conteudo').innerHTML
+    let ultCar = conteudo.slice(-1)
+    let sins = '+-*/'
+    if (conteudo.length > 0 && sins.indexOf(ultCar) == -1){
+        result.innerHTML += sin
+    }
+}
+
+function insertPoint(){
+    let result = document.getElementById('conteudo')
+    let conteudo = document.getElementById('conteudo').innerHTML
+    if (conteudo == ''){
+        result.innerHTML += '0.'
+    } else if (conteudo.indexOf('.') == -1) {
+        result.innerHTML = '.'
+    }
 }
 
 function clean(){
     const result = document.getElementById('conteudo')
     result.innerHTML = ''
-    var numero = ''
 }
 
 function backSpace(){
@@ -17,10 +40,10 @@ function backSpace(){
 
 function count(){
     let result = document.getElementById('conteudo').innerHTML
-    let numero
+    let conteudo
     if (result) {
-        numero = eval(result)
-        document.getElementById('conteudo').innerHTML = numero/100
+        conteudo = eval(result)
+        document.getElementById('conteudo').innerHTML = conteudo/100
     }
 
 }
