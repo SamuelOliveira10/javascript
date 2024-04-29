@@ -24,7 +24,7 @@ function insertPoint(){
     if (conteudo == ''){
         result.innerHTML += '0.'
     } else if (conteudo.indexOf('.') == -1) {
-        result.innerHTML = '.'
+        result.innerHTML += '.'
     }
 }
 
@@ -35,7 +35,11 @@ function clean(){
 
 function backSpace(){
     let result = document.getElementById('conteudo').innerHTML 
-    document.getElementById('conteudo').innerHTML = result.substring(0, result.length -1)
+    if (result == '0.'){
+        document.getElementById('conteudo').innerHTML = result.substring(0, result.length -2)
+    } else {
+        document.getElementById('conteudo').innerHTML = result.substring(0, result.length -1)
+    }
 }
 
 function count(){
